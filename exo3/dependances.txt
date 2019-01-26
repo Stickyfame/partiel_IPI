@@ -1,0 +1,14 @@
+Q1
+Server dépend de Common, Client dépend de Common et Graphics
+
+Q2
+gcc -c server.c common.o
+
+Q3
+gcc server.o common.o -o server
+
+Q4
+Il faut recompiler Graphics
+
+Q5
+Il faut recompiler Common, Server et Client
