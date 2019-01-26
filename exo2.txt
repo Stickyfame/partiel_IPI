@@ -1,0 +1,3 @@
+Q3
+Les anciens pointeurs qui pointaient vers b ne pointent plus vers rien du tout (case mémoire random)
+Fuite mémoire : on a supprimé c.next sans libérer la mémoire
