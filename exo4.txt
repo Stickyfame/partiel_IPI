@@ -1,0 +1,27 @@
+Q1
+La division est entre 2 int donc on prend la partie entière inférieure, donc la fonction retourne 2^0, donc 1.
+
+Q2
+Le tableau retourné sera :
+[1, 3, 15, 150, 44]
+En effet, 1*1.5 donne 1 car partie entière avec des char.
+De plus, un unsigned char ne va que jusqu'à 255, et 200*1.5 = 44 CAR :
+	normalement 200*1.5 = 300 MAIS quand on dépasse 255 on repart à 0 avec les char
+	donc 300 dépasse de 45 la limite de 255, donc 200*1.5 = 44 (on reprend à 0)
+
+Q3
+La condition porte sur "est-ce qu'on arrive à assigner 1 à la variable b" ce qui est toujours vrai.
+Donc la fonction retourne 11.
+
+Q4
+Un if sans accolade ne prend en compte que la première ligne en-dessous de lui.
+La deuxième ligne sera exécutée dans tous les cas.
+if (!b) signifie "si b vaut 0" et ici b=1, donc on ne rentre pas dans le if.
+Donc on effectue la dernière ligne, donc y vaut y+1 à la fin de l'exécution.
+
+Q5
+Dans le premier malloc, il y a sizeof(char) au lieu de sizeof(char *).
+Ainsi, dans chaque case ret[i], il y a de la place pour UN SEUL char.
+Donc lorsque l'on voudra effectuer le ret[i]=calloc(n, sizeof(char)),
+il y aura une erreur car on ne peut pas mettre quelque chose de plus grand qu'un char
+dans une case qui ne fait que la taille de UN char.
